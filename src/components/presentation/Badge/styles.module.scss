@@ -1,0 +1,26 @@
+.root {
+  margin-right: 0;
+  padding: 3px 9px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(118, 118, 128, 0.1);
+  color: #3c3c3e;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.root[data-tone="info"] {
+  background: rgba(89, 99, 110, 0.12);
+  color: #4d5862;
+}
+
+.root[data-tone="success"] {
+  background: rgba(95, 118, 95, 0.13);
+  color: #516850;
+}
+
+.root[data-tone="warning"] {
+  background: rgba(138, 115, 86, 0.13);
+  color: #735f45;
+}

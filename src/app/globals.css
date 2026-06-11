@@ -1,0 +1,39 @@
+:root {
+  --app-canvas: #f6f6f4;
+  --app-foreground: #1d1d1f;
+  --app-muted: #6e6e73;
+  --app-accent: #59636e;
+  --app-surface: rgba(255, 255, 255, 0.76);
+  --app-separator: rgba(60, 60, 67, 0.14);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--app-foreground);
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 22% 0%, rgba(120, 128, 138, 0.1), transparent 28%),
+    radial-gradient(circle at 80% 12%, rgba(182, 178, 166, 0.12), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(242, 242, 240, 0.88)),
+    var(--app-canvas);
+  background-size:
+    auto,
+    auto,
+    auto;
+  background-position:
+    0 0,
+    100% 0,
+    0 0;
+}
+
+::selection {
+  background: rgba(89, 99, 110, 0.16);
+}
+
+.ant-app {
+  min-height: 100vh;
+  background: transparent;
+}
