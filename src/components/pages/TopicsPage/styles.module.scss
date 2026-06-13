@@ -1,0 +1,146 @@
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.summary {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid rgba(60, 60, 67, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.summaryLabel {
+  color: var(--app-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.summaryValue {
+  color: var(--app-foreground);
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.summaryText {
+  max-width: 520px;
+  margin: 0;
+  color: var(--app-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.list {
+  overflow: hidden;
+  border: 1px solid rgba(60, 60, 67, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.item {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease;
+
+  & + & {
+    border-top: 1px solid var(--app-separator);
+  }
+
+  &:hover {
+    background: rgba(118, 118, 128, 0.07);
+  }
+}
+
+.itemMain {
+  display: grid;
+  gap: 8px;
+}
+
+.itemHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.itemTitle {
+  margin: 0;
+  color: var(--app-foreground);
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.itemNote {
+  max-width: 720px;
+  margin: 0;
+  color: #3c3c3e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.badge {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(118, 118, 128, 0.1);
+  color: #3c3c3e;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.badge[data-tone="info"] {
+  background: rgba(89, 99, 110, 0.12);
+  color: #4d5862;
+}
+
+.badge[data-tone="success"] {
+  background: rgba(95, 118, 95, 0.13);
+  color: #516850;
+}
+
+.badge[data-tone="warning"] {
+  background: rgba(138, 115, 86, 0.13);
+  color: #735f45;
+}
+
+.itemMeta {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.metaLabel {
+  color: var(--app-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metaValue {
+  color: var(--app-foreground);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (min-width: 760px) {
+  .item {
+    grid-template-columns: minmax(0, 1fr) 120px;
+    align-items: center;
+  }
+
+  .itemMeta {
+    display: grid;
+    justify-items: end;
+  }
+}

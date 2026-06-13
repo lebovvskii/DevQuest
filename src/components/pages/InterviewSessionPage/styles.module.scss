@@ -1,0 +1,112 @@
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.summary {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid rgba(60, 60, 67, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.summaryMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.summaryText {
+  max-width: 720px;
+  margin: 0;
+  color: var(--app-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: grid;
+  gap: 10px;
+}
+
+.statCard,
+.promptItem,
+.focusItem {
+  border: 1px solid rgba(60, 60, 67, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.statCard {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+}
+
+.statLabel {
+  color: var(--app-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statValue {
+  color: var(--app-foreground);
+  font-size: 23px;
+  font-weight: 650;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.promptList,
+.focusList {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promptItem {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.promptIndex {
+  color: var(--app-accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.promptQuestion {
+  margin: 0;
+  color: var(--app-foreground);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.focusItem {
+  padding: 14px 16px;
+  color: #3c3c3e;
+  font-size: 14px;
+}
+
+@media (min-width: 760px) {
+  .stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  }
+}

@@ -1,0 +1,135 @@
+.content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.backLink {
+  width: fit-content;
+  color: var(--app-accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: #414a53;
+  }
+}
+
+.startLink {
+  width: fit-content;
+  padding: 10px 14px;
+  border: 1px solid rgba(60, 60, 67, 0.12);
+  border-radius: 14px;
+  color: var(--app-foreground);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    background: rgba(245, 245, 243, 0.92);
+  }
+}
+
+.overview {
+  display: grid;
+  gap: 10px;
+}
+
+.metric,
+.panel {
+  border: 1px solid rgba(60, 60, 67, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.metric {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+}
+
+.metricLabel {
+  color: var(--app-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metricValue {
+  color: var(--app-foreground);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.panelHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panelTitle {
+  margin: 0;
+  color: var(--app-foreground);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.badge {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(118, 118, 128, 0.1);
+  color: #3c3c3e;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.badge[data-tone="info"] {
+  background: rgba(89, 99, 110, 0.12);
+  color: #4d5862;
+}
+
+.badge[data-tone="success"] {
+  background: rgba(95, 118, 95, 0.13);
+  color: #516850;
+}
+
+.badge[data-tone="warning"] {
+  background: rgba(138, 115, 86, 0.13);
+  color: #735f45;
+}
+
+.focusList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.focusItem {
+  padding: 12px;
+  border: 1px solid rgba(60, 60, 67, 0.08);
+  border-radius: 12px;
+  background: rgba(118, 118, 128, 0.07);
+  color: #3c3c3e;
+  font-size: 14px;
+}
+
+@media (min-width: 760px) {
+  .overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
