@@ -9,13 +9,15 @@ export const TopicDetailsPage = ({ topic }: TopicDetailsPageProps) => {
   return (
     <PageLayout eyebrow="Topic details" title={topic.name} description={topic.description}>
       <section className={styles.content}>
-        <Link className={styles.backLink} href="/topics">
-          {"<"} Back to topics
-        </Link>
+        <div className={styles.toolbar}>
+          <Link className={styles.backLink} href="/topics">
+            {"<"} Back to topics
+          </Link>
 
-        <Link className={styles.startLink} href={`/interview/start?topicId=${topic.id}`}>
-          Start session
-        </Link>
+          <Link className={styles.startLink} href={`/interview/start?topicId=${topic.id}`}>
+            Start session
+          </Link>
+        </div>
 
         <div className={styles.overview}>
           <div className={styles.metric}>

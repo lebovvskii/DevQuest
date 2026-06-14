@@ -6,7 +6,6 @@ import type { PageLayoutProps } from "./types";
 export const PageLayout = ({ eyebrow, title, description, actions, className, children }: PageLayoutProps) => {
   return (
     <main className={classNames(styles.root, className)}>
-      <div aria-hidden="true" className={styles.scene} />
       <section className={styles.hero}>
         <div className={styles.intro}>
           {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
@@ -18,7 +17,7 @@ export const PageLayout = ({ eyebrow, title, description, actions, className, ch
         {actions ? <div className={styles.actions}>{actions}</div> : null}
       </section>
 
-      {children}
+      <div className={styles.body}>{children}</div>
     </main>
   );
 };

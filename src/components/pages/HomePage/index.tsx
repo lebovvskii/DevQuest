@@ -14,9 +14,9 @@ import styles from "./styles.module.scss";
 export const DashboardHome = () => {
   return (
     <PageLayout
-      eyebrow="DevQuest workspace"
-      title="DevQuest"
-      description="A focused interview practice workspace with today's readiness, topic coverage, and the next training flow."
+      eyebrow="Workspace"
+      title="You're 68% ready"
+      description="Keep the session short, then review the weak answers while the context is still fresh."
       actions={
         <Space wrap>
           <Button href="/topics">
@@ -28,24 +28,14 @@ export const DashboardHome = () => {
         </Space>
       }
     >
-      <div className={styles.workspace}>
-        <aside aria-label="Training overview" className={styles.sidebar}>
-          <div className={styles.sidebarHeader}>
-            <span className={styles.sidebarLabel}>Today</span>
-            <h2 className={styles.sidebarTitle}>68% ready</h2>
-            <p className={styles.sidebarDescription}>
-              Keep the session short, then review the weak answers while the context is still fresh.
-            </p>
-          </div>
+      <div className={styles.content}>
+        <section aria-label="Training overview" className={styles.stats}>
+          {overviewStats.map((stat) => (
+            <MetricCard key={stat.label} {...stat} />
+          ))}
+        </section>
 
-          <section className={styles.stats}>
-            {overviewStats.map((stat) => (
-              <MetricCard key={stat.label} {...stat} />
-            ))}
-          </section>
-        </aside>
-
-        <section className={styles.content}>
+        <div className={styles.columns}>
           <Panel
             className={styles.primaryPanel}
             description="Dense enough for real work, but structured like a native grouped list."
@@ -107,7 +97,7 @@ export const DashboardHome = () => {
               </div>
             </Panel>
           </div>
-        </section>
+        </div>
       </div>
     </PageLayout>
   );
